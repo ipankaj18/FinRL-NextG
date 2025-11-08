@@ -282,31 +282,8 @@ Technical indicators: 'macd', 'boll_ub', 'boll_lb', 'rsi_30', 'dx_30', 'close_30
 }
 ```
 
-```
-@article{liu2018practical,
-  title={Practical deep reinforcement learning approach for stock trading},
-  author={Liu, Xiao-Yang and Xiong, Zhuoran and Zhong, Shan and Yang, Hongyang and Walid, Anwar},
-  journal={NeurIPS Workshop on Deep Reinforcement Learning},
-  year={2018}
-}
-```
-
-We published [FinRL papers](http://tensorlet.org/projects/ai-in-finance/) that are listed at [Google Scholar](https://scholar.google.com/citations?view_op=list_works&hl=en&hl=en&user=XsdPXocAAAAJ). Previous papers are given in the [list](https://github.com/AI4Finance-Foundation/FinRL/blob/master/tutorials/FinRL_papers.md).
 
 
-## Join and Contribute
-
-Welcome to **AI4Finance** community!
-
-Please check [Contributing Guidances](https://github.com/AI4Finance-Foundation/FinRL-Tutorials/blob/master/Contributing.md).
-
-### Contributors
-
-Thank you!
-
-<a href="https://github.com/AI4Finance-LLC/FinRL-Library/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=AI4Finance-LLC/FinRL-Library" />
-</a>
 
 
 ## LICENSE
