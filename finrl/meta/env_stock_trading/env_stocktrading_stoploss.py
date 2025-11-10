@@ -14,6 +14,7 @@ from gymnasium.utils import seeding
 import logging
 from stable_baselines3.common.vec_env import DummyVecEnv
 from stable_baselines3.common.vec_env import SubprocVecEnv
+from stable_baselines3.common.monitor import Monitor
 
 matplotlib.use("Agg")
 
@@ -486,10 +487,14 @@ class StockTradingEnvStopLoss(gym.Env):
         return e, obs
 
     def get_multiproc_env(self, n=10):
-        def get_self():
-            return deepcopy(self)
+        def make_env(rank):
+            def _init():
+                env = deepcopy(self)
+                env = Monitor(env)  # ✅ wrap each environment before vectorization
+                return env
+            return _init
 
-        e = SubprocVecEnv([get_self for _ in range(n)], start_method="fork")
+        e = SubprocVecEnv([make_env(i) for i in range(n)], start_method="fork")
         obs = e.reset()
         return e, obs
 
